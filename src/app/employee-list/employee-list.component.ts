@@ -32,6 +32,8 @@ export class EmployeeListComponent implements OnInit {
   }
 
   delete(employeeId: number) {
-    console.log("To implement delete")
+   this.employeeService.deleteEmployee(employeeId).subscribe(data =>
+     this.employees = this.employees.filter(employee => employee.employeeId !== employeeId)
+   )
   }
 }
