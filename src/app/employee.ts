@@ -6,7 +6,7 @@ export class Employee {
   lastName!: string
   departmentId!: number
   jobTitle!: string
-  dateOfBirth!: Date
+  dateOfBirth!: string
   gender!: Gender
 
 
