@@ -36,4 +36,8 @@ export class EmployeeListComponent implements OnInit {
      this.employees = this.employees.filter(employee => employee.employeeId !== employeeId)
    )
   }
+
+  details(employeeId: number) {
+    console.log("to implement details")
+  }
 }

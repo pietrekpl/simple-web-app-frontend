@@ -9,13 +9,19 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CreateEmployeeComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

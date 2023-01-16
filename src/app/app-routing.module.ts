@@ -1,10 +1,18 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {EmployeeListComponent} from "./employee-list/employee-list.component";
+import {CreateEmployeeComponent} from "./create-employee/create-employee.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {AppComponent} from "./app.component";
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
+
+  {path: '', component: HomeComponent},
   {path: 'employees', component: EmployeeListComponent},
+  {path: 'create-employee', component: CreateEmployeeComponent},
+  {path: '**', component: PageNotFoundComponent},
 ]
 
 @NgModule({
@@ -14,4 +22,5 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
