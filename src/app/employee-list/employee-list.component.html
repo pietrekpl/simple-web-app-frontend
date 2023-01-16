@@ -1,0 +1,32 @@
+<h2>Employee list:</h2>
+<table class="table table-hover table-dark">
+  <thead>
+  <tr>
+    <th scope="col">#ID</th>
+    <th scope="col">FirstName</th>
+    <th scope="col">LastName</th>
+    <th scope="col">Department ID</th>
+    <th scope="col">Job Title</th>
+    <th scope="col">Date of Birth</th>
+    <th scope="col">Gender</th>
+    <th>Operations</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees">
+    <th scope="row">{{employee.employeeId}}</th>
+    <td>{{employee.firstName}}</td>
+    <td>{{employee.lastName}}</td>
+    <td>{{employee.departmentId}}</td>
+    <td>{{employee.jobTitle}}</td>
+    <td>{{employee.dateOfBirth}}</td>
+    <td>{{employee.gender}}</td>
+    <td>
+      <button (click)="updateEmployee(employee.employeeId)" class="btn btn-info">EDIT</button>
+      <button (click)="delete(employee.employeeId)" class="btn btn-danger">DELETE</button>
+    </td>
+  </tr>
+
+
+  </tbody>
+</table>
