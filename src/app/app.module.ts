@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     CreateEmployeeComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    UpdateEmployeeComponent
   ],
   imports: [
     BrowserModule,

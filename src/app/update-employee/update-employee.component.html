@@ -1,5 +1,4 @@
-
-<h1>Add new employee</h1>
+<h1>Update employee</h1>
 <form (ngSubmit)="onSubmit()">
   <div class="form-row">
 
@@ -53,6 +52,7 @@
       <select id="gender" class="form-control"
               [(ngModel)]="employee.gender"
               name="gender">
+        <option selected>{{employee.gender}}</option>
         <option>Male</option>
         <option>Female</option>
       </select>
@@ -60,6 +60,7 @@
   </div>
   <div >
     <br>
-    <button type="submit" class="btn btn-primary">Create</button>
+    <button type="submit" class="btn btn-primary">Update</button>
   </div>
 </form>
+
