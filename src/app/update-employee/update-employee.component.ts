@@ -2,9 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Employee} from "../employee";
 import {EmployeeService} from "../employee.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Gender} from "../gender";
-
-
 
 
 @Component({
@@ -29,8 +26,8 @@ export class UpdateEmployeeComponent implements OnInit {
     this.employeeId = this.route.snapshot.params['employeeId']
     this.employeeService.getEmployeeById(this.employeeId).subscribe(data => {
       this.employee = data
-
       this.employee.dateOfBirth = this.employee.dateOfBirth.split(".").reverse().join("-")
+      console.log(this.employeeService.validateEmployeeAge(this.employee.dateOfBirth))
 
     }, error => console.log(error))
   }

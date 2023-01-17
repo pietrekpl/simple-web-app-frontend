@@ -11,9 +11,14 @@ export class EmployeeService {
 
   private baseUrl = 'http://localhost:8080/simplewebapp/employees'
 
-  constructor(private httpClient: HttpClient) {
+  validateEmployeeAge(employeeAge: string){
+    const date = new Date()
+    const parsedDate = new Date(employeeAge);
+    return Math.abs(date.getFullYear() - parsedDate.getFullYear())
   }
 
+  constructor(private httpClient: HttpClient) {
+  }
   getAllEmployees(): Observable<Employee[]> {
     return this.httpClient.get<Employee[]>(this.baseUrl)
   }
