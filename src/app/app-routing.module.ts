@@ -6,12 +6,14 @@ import {CreateEmployeeComponent} from "./create-employee/create-employee.compone
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {HomeComponent} from "./home/home.component";
 import {UpdateEmployeeComponent} from "./update-employee/update-employee.component";
+import {EmployeeDetailsComponent} from "./employee-details/employee-details.component";
 
 const routes: Routes = [
 
   {path: '', component: HomeComponent},
   {path: 'employees', component: EmployeeListComponent},
   {path: 'create-employee', component: CreateEmployeeComponent},
+  {path: 'details-employee/:employeeId', component: EmployeeDetailsComponent},
   {path: 'update-employee/:employeeId', component: UpdateEmployeeComponent},
   {path: '**', component: PageNotFoundComponent},
 ]

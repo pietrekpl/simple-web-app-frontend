@@ -39,6 +39,6 @@ export class EmployeeListComponent implements OnInit {
   }
 
   details(employeeId: number) {
-    console.log("to implement details")
+    this.router.navigate(['/details-employee', employeeId])
   }
 }

@@ -36,3 +36,9 @@ select {
   color: red;
   font-weight: bold;
 }
+
+.centerBlock{
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
