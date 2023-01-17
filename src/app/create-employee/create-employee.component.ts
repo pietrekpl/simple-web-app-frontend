@@ -21,9 +21,20 @@ export class CreateEmployeeComponent {
   }
 
   onSubmit() {
+    if (this.validateEmployeeAge(this.employee.dateOfBirth) || this.isNegativeDepartmentId(this.employee.departmentId)){
+      return
+    }
     this.employeeService.createEmployee(this.employee).subscribe(data => {
       console.log(data)
     })
     this.getBackToMainPage()
+  }
+
+  validateEmployeeAge(dateOfBirth: string) {
+    return this.employeeService.validateEmployeeAge(dateOfBirth)
+  }
+
+  isNegativeDepartmentId(departmentId: number) {
+    return departmentId < 0
   }
 }

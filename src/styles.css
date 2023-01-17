@@ -31,3 +31,8 @@ select {
   width: 100%;
   padding: .5rem;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+}

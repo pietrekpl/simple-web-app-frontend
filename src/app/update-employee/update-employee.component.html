@@ -28,6 +28,11 @@
              [(ngModel)]="employee.departmentId"
              name="departmentId">
     </div>
+    <ng-container *ngIf="isNegativeDepartmentId(employee.departmentId)">
+      <div class="error">
+        Department Id can not have negative value
+      </div>
+    </ng-container>
 
     <div class="form-group col-md-4">
       <label for="jobTitle">Job Title</label>
@@ -46,6 +51,11 @@
              [(ngModel)]="employee.dateOfBirth"
              name="dateOfBirth">
     </div>
+    <ng-container *ngIf="validateEmployeeAge(employee.dateOfBirth)">
+      <div class="error">
+        Employee age must be over 18
+      </div>
+    </ng-container>
 
     <div class="form-group col-md-4">
       <label for="gender">Gender</label>

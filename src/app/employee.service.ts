@@ -14,7 +14,7 @@ export class EmployeeService {
   validateEmployeeAge(employeeAge: string){
     const date = new Date()
     const parsedDate = new Date(employeeAge);
-    return Math.abs(date.getFullYear() - parsedDate.getFullYear())
+    return Math.abs(date.getFullYear() - parsedDate.getFullYear()) < 18
   }
 
   constructor(private httpClient: HttpClient) {
