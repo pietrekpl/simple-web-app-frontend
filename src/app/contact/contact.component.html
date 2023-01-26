@@ -1,0 +1,26 @@
+<!-- google-maps-demo.component.html -->
+
+<div class="flex-parent">
+  <div class="inline-block-child">
+    <google-map height="400px"
+                width="750px"
+                [center]="center"
+                [zoom]="zoom"
+                (mapClick)="moveMap($event)"
+                (mapMousemove)="move($event)">
+      <map-marker [position]="marker.position"></map-marker>
+    </google-map>
+
+  </div>
+  <div class="inline-block-child centerLeft">
+    <img [src]="company.imageUrl" alt="company image">
+    <p>{{company.companyName}}</p>
+    <label>Address:</label>
+    <p>{{company.companyAddress}}</p>
+    <label>Mail:</label>
+    <p>{{company.companyMail}}</p>
+    <label>Telephone:</label>
+    <p>{{company.companyPhone}}</p>
+  </div>
+</div>
+

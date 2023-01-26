@@ -7,6 +7,7 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {HomeComponent} from "./home/home.component";
 import {UpdateEmployeeComponent} from "./update-employee/update-employee.component";
 import {EmployeeDetailsComponent} from "./employee-details/employee-details.component";
+import {ContactComponent} from "./contact/contact.component";
 
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'employees', component: EmployeeListComponent},
   {path: 'create-employee', component: CreateEmployeeComponent},
   {path: 'details-employee/:employeeId', component: EmployeeDetailsComponent},
+  {path: 'contact', component: ContactComponent},
   {path: 'update-employee/:employeeId', component: UpdateEmployeeComponent},
   {path: '**', component: PageNotFoundComponent},
 ]

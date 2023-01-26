@@ -14,6 +14,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { ContactComponent } from './contact/contact.component';
+import {GoogleMapsModule} from "@angular/google-maps";
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     PageNotFoundComponent,
     HomeComponent,
     UpdateEmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     RouterLink,
     RouterOutlet,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    GoogleMapsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
