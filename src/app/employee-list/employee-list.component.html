@@ -9,20 +9,38 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let employee of employees">
+  <tr *ngFor="let employee of employees let i = index">
     <th scope="row">{{employee.employeeId}}</th>
     <td>{{employee.firstName}}</td>
     <td>{{employee.lastName}}</td>
     <td>
       <button (click)="updateEmployee(employee.employeeId)" class="btn btn-info">EDIT</button>
       <button (click)="delete(employee.employeeId)" class="btn btn-danger">DELETE</button>
-      <button (click)="details(employee.employeeId)" class="btn btn-light">DETAILS</button>
+      <button (click)="openCityDialog(employee.employeeId)" class="btn btn-light">DETAILS</button>
+      <ng-template let-data #myCityDialog>
+        <h2 mat-dialog-title> Employee Details </h2>
+        <div mat-dialog-content>
+          <p>Firstname: {{employeeById!.firstName}}</p>
+          <p>Lastname: {{employeeById!.lastName}}</p>
+        </div>
+        <div mat-dialog-actions>
+          <div class="col-md-7">
+            <p>Employee Id: {{employeeById!.employeeId}}</p>
+            <p>Job Title: {{employeeById!.jobTitle}}</p>
+            <p>Department Id: {{employeeById!.departmentId}}</p>
+            <p>Date Of Birth: {{employeeById!.dateOfBirth}}</p>
+            <p>Gender: {{employeeById!.gender}}</p>
+          </div>
+          <div class="centered">
+            <button class="btn btn-info" mat-dialog-close>Close</button>
+          </div>
+        </div>
+      </ng-template>
     </td>
   </tr>
-
-
   </tbody>
 </table>
 <div class="centerBlock">
   <button class="btn btn-info" routerLink="/">Back to main menu</button>
 </div>
+

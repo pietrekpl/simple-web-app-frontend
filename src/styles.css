@@ -56,6 +56,11 @@ select {
   margin-right: auto;
   width: 8em
 }
-body {
-  font-family: "Oswald", sans-serif;
+.centered {
+  width:100%;
+  display: flex;
+  justify-content: center;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

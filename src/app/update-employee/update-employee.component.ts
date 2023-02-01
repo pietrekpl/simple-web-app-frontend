@@ -32,7 +32,7 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.validateEmployeeAge(this.employee.dateOfBirth) || this.isNegativeDepartmentId(this.employee.departmentId)){
+    if (this.validateEmployeeAge(this.employee.dateOfBirth) || this.isNegativeDepartmentId(this.employee.departmentId)) {
       return
     }
     this.employeeService.updateEmployee(this.employeeId, this.employee).subscribe(data =>
@@ -43,6 +43,7 @@ export class UpdateEmployeeComponent implements OnInit {
   validateEmployeeAge(dateOfBirth: string) {
     return this.employeeService.validateEmployeeAge(dateOfBirth)
   }
+
   isNegativeDepartmentId(departmentId: number) {
     return departmentId < 0
   }

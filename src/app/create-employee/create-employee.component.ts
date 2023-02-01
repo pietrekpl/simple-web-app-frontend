@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Employee} from "../employee";
 import {EmployeeService} from "../employee.service";
 import {Router} from "@angular/router";
@@ -16,12 +16,12 @@ export class CreateEmployeeComponent {
               private router: Router) {
   }
 
-  getBackToMainPage(){
+  getBackToMainPage() {
     this.router.navigate([''])
   }
 
   onSubmit() {
-    if (this.validateEmployeeAge(this.employee.dateOfBirth) || this.isNegativeDepartmentId(this.employee.departmentId)){
+    if (this.validateEmployeeAge(this.employee.dateOfBirth) || this.isNegativeDepartmentId(this.employee.departmentId)) {
       return
     }
     this.employeeService.createEmployee(this.employee).subscribe(data => {
